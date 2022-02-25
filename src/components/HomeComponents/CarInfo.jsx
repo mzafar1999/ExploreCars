@@ -1,7 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { initialCar } from '../../Redux/carsSlice'
+import UpdateForm from './UpdateForm'
 export const Container = styled.div`
     border: 2px solid #79fdf7;
     border-radius: 15px;
@@ -36,7 +39,13 @@ const SpecWrapper = styled.div`
 
  
 const CarInfo = () => {
-  const currentCar = useSelector(state=>state.cars.currentCar)
+  let currentCar = useSelector(state=>state.cars.currentCar)
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(initialCar())
+  }, [])
+  
+  
   return (
     <>
     <Container className='mx-2 p-2'>
@@ -73,13 +82,11 @@ const CarInfo = () => {
         </Title> {currentCar.fuel_type}
        </SpecWrapper>
       </Details>
-        <Link to={`/update-car-info/${currentCar.id}`}>
-      <button className='btn btn-primary'>
-          Update Car Info
-      </button>
-        </Link>
+       
     </Container>
+    <UpdateForm/>
     </>
+    
   )
 }
 
