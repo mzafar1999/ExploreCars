@@ -1,6 +1,6 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import styled from 'styled-components'
-import { cars } from './data'
 import SingleCarListComp from './SingleCarListComp'
 
 
@@ -10,8 +10,9 @@ const Container = styled.div`
 `
 
 const CarList = () => {
+  const cars = useSelector(state=>state.cars)
   return (
-    <Container className='mx-2 px-2'>
+    <Container className='mx-2 px-2 '>
         {cars.map((car)=>{
             return (<SingleCarListComp key={car.id} title={car.name} image={car.imgtumbnail} />)
         })}

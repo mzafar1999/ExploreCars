@@ -6,7 +6,8 @@ const Navbar = styled.div`
 
 `;
 const Left = styled.div`
-
+	height: 60px;
+	width: 60px;
 `;
 const Center = styled.div`
 
@@ -15,16 +16,17 @@ const Right = styled.div`
     
 `;
 const Image = styled.img`
+	width: 100%;
+	margin-left: 40px;
 `;
-const Logo = styled.h3``;
 const Search = styled.input``;
 const Button = styled.button``;
 const Nav = () => {
 	return (
 		<Wrapper>
-			<Navbar className="d-flex justify-content-between mt-2">
+			<Navbar className="d-flex justify-content-between mt-2 align-items-center">
 				<Left className='d-flex justify-content-center align-items-center'>
-					<Logo>My Web App</Logo>
+					<Image src='/images/logo.png'></Image>
 				</Left>
 				<Center className='d-flex justify-content-center align-items-center'>
 					<Search placeholder="Search" className='form-control' />
@@ -33,7 +35,6 @@ const Nav = () => {
 				<Right className='d-flex align-items-end'>
         <Button className='btn btn-primary'>Sign in</Button>
         <Button className='btn btn-primary  mx-2'>Sign up</Button>
-
 				</Right>
 			</Navbar>
 		</Wrapper>
