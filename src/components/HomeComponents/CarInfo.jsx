@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-const Container = styled.div`
+export const Container = styled.div`
     border: 2px solid #79fdf7;
     border-radius: 15px;
 `
@@ -18,7 +19,7 @@ const Image = styled.img`
 const TitleWrapper = styled.div`
     flex: 1;
 `
-const Title = styled.h1`
+export const Title = styled.h1`
     
 `
 const SubTitle = styled.h4`
@@ -31,12 +32,7 @@ const Details = styled.div`
 const SpecWrapper = styled.div`
 
 `
-const UpdateForm = styled.div`
-  
-`
-const Input = styled.input`
-  
-`
+
 
  
 const CarInfo = () => {
@@ -77,17 +73,11 @@ const CarInfo = () => {
         </Title> {currentCar.fuel_type}
        </SpecWrapper>
       </Details>
-    </Container>
-    <Container className='mt-3 mx-2 p-2 d-flex flex-column justify-content-center mx-auto '>
-       <Title className='h6 display-6 mt-3 mx-auto'>
-          Update Car Info:
-        </Title>
-        <UpdateForm className='form-group d-flex flex-column justify-content-center'>
-          <Input placeholder='Enter new info of Engine ' className='form-control w-75 mt-2 mx-auto'/>
-          <Input placeholder='Enter new info of Transmission' className='form-control w-75 mt-2 mx-auto'/>
-          <Input placeholder='Enter new info of Fuel Type' className='form-control w-75 mt-2 mx-auto'/>
-          <button className='btn btn-primary w-25 mx-auto mt-3'>Update</button>
-        </UpdateForm>
+        <Link to={`/update-car-info/${currentCar.id}`}>
+      <button className='btn btn-primary'>
+          Update Car Info
+      </button>
+        </Link>
     </Container>
     </>
   )

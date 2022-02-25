@@ -6,11 +6,15 @@ import SignUp from './components/SignUp';
 import 'bootstrap/dist/css/bootstrap.css';
 
 import { BrowserRouter as Router,Route, } from "react-router-dom";
+import UpdateForm from './components/HomeComponents/UpdateForm';
 
 function App() {
   return (
    <Router>
      <Nav/>
+     <Route path='/update-car-info/:id'>
+      <UpdateForm/>
+    </Route>
      <Route path='/login'>
       <Login/>
     </Route>
