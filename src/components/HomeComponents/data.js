@@ -14,7 +14,7 @@ export const cars = [{
     sub_title:'ALL-NEW POWERTRAIN',
     engine:' twin-turbocharged V6',
     transmission:'Standard 10-speed Direct-Shift automatic transmission',
-    fuel_type:'Patrol',
+    fuel_type:'Dissel',
     img:'/images/lx600.jpg',
     imgtumbnail:'/images/lx600png.png'
 
