@@ -1,19 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { cars } from "../components/HomeComponents/data";
-
 const carsSlice = createSlice({
     name: 'cars',
-    initialState: cars,
+    initialState: {
+        allCars:cars,
+        currentCar:{car:cars[0]}
+    },
     reducers: {
       updateCarInfo :(state, action) => {
-        console.log(action.payload);
       },
-      getCars:(state,action)=>{
-
+      selectCurrentCar:(state,action)=>{
+          state.currentCar = action.payload
       }
     },
   })
   
-  const { updateCarInfo,getCars } = carsSlice.actions
+  export const { updateCarInfo,selectCurrentCar } = carsSlice.actions
 
   export default carsSlice.reducer
