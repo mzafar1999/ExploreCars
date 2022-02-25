@@ -5,15 +5,22 @@ import styled from 'styled-components'
 const Wrapper = styled.div`
     display: flex;
     align-items: center;
-    border: 1px solid #acacac;
-    margin: 5px;
+    border: 1px solid #bfe0d3;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    cursor: pointer;
     padding: 5px;
+
+    &:hover{
+        background-color: #a4edf7;
+    }
 `
 const ImageWrapper = styled.div`
     width: 70px;
     height: 75px;
     border-radius: 50%;
-    border: 1px solid #da5a5a;
+    border: 1px solid #5acbda;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,13 +30,13 @@ const ImageWrapper = styled.div`
 
 `
 const Image = styled.img`
-    width: 100%;
+    width: 80%;
     border-radius: 50%;
     object-fit: cover;
 
 `
 const TitleWrapper = styled.div`
-flex:2
+flex:3
 `
 const Title = styled.h5``
 

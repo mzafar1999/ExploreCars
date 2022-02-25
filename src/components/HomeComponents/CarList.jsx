@@ -11,9 +11,9 @@ const Container = styled.div`
 
 const CarList = () => {
   return (
-    <Container className='mx-2 p-2'>
+    <Container className='mx-2 px-2'>
         {cars.map((car)=>{
-            return (<SingleCarListComp key={car.id} title={car.name} image={car.img} />)
+            return (<SingleCarListComp key={car.id} title={car.name} image={car.imgtumbnail} />)
         })}
     </Container>
   )

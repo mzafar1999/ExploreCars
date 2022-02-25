@@ -5,7 +5,9 @@ export const cars = [{
     engine:' F33A-FTV, 3.3L, TWIN TURBO',
     transmission:'10 SPEED AUTOMATIC',
     fuel_type:'Patrol',
-    img:'/images/lc300.png'
+    img:'/images/lc300.png',
+    imgtumbnail:'/images/lc300png.png'
+
 },{
     id:2,
     name:'Lexus LX600',
@@ -13,6 +15,8 @@ export const cars = [{
     engine:' twin-turbocharged V6',
     transmission:'Standard 10-speed Direct-Shift automatic transmission',
     fuel_type:'Patrol',
-    img:'/images/lx600.jpg'
+    img:'/images/lx600.jpg',
+    imgtumbnail:'/images/lx600png.png'
+
 }
 ]

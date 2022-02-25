@@ -11,10 +11,10 @@ const Left = styled.div`
   flex: 1;
 `;
 const Center = styled.div`
-  flex: 3;
+  flex: 2;
 `;
 const Right = styled.div`
-    flex: 2;
+    flex: 1;
 `;
 const Home = () => {
   return (
