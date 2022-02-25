@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import CarInfo from './HomeComponents/CarInfo';
 import CarList from './HomeComponents/CarList';
-import CarPhotos from './HomeComponents/CarPhotos';
+import CarCatagories from './HomeComponents/CarCatagories';
 
 const Container = styled.div`
   
@@ -26,7 +26,7 @@ const Home = () => {
         <CarInfo/>
       </Center>
       <Right>
-        <CarPhotos/>
+        <CarCatagories/>
       </Right>
     </Container>
   )

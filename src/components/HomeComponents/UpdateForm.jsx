@@ -34,7 +34,7 @@ const UpdateForm = () => {
     }
     
   return (
-    <Container className='container mt-3 mx-2 p-2 d-flex flex-column justify-content-center mx-auto '>
+    <Container className='container mt-2 mx-2 p-2 d-flex flex-column justify-content-center mx-auto '>
     <Title className='h6 display-6 mt-3 mx-auto'>
        Update Car Info:
      </Title>

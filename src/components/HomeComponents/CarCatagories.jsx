@@ -7,7 +7,7 @@ const Container = styled.div`
 `
 const CarPhotos = () => {
   return (
-    <Container className='mx-2 p-2'>CarPhotos</Container>
+    <Container className='mx-2 p-2'>CarCatagories</Container>
   )
 }
 
