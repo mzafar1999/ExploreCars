@@ -10,7 +10,8 @@ const Left = styled.div`
 	width: 60px;
 `;
 const Center = styled.div`
-
+	position: relative;
+	left: -60px;
 `;
 const Right = styled.div`
     
@@ -26,15 +27,14 @@ const Nav = () => {
 		<Wrapper>
 			<Navbar className="d-flex justify-content-between mt-2 align-items-center">
 				<Left className='d-flex justify-content-center align-items-center'>
-					<Image src='/images/logo.png'></Image>
 				</Left>
 				<Center className='d-flex justify-content-center align-items-center'>
-					<Search placeholder="Search" className='form-control' />
-					<Button className='btn btn-primary  mx-2'>Search</Button>
+				<Image className='w-75' src='/images/logo.png'></Image>
+					{/* <Search placeholder="Search" className='form-control' />
+					<Button className='btn btn-primary  mx-2'>Search</Button> */}
 				</Center>
 				<Right className='d-flex align-items-end'>
-        <Button className='btn btn-primary'>Sign in</Button>
-        <Button className='btn btn-primary  mx-2'>Sign up</Button>
+        
 				</Right>
 			</Navbar>
 		</Wrapper>
