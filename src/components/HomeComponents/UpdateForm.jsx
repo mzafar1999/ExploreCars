@@ -36,7 +36,7 @@ const UpdateForm = () => {
   return (
     <Container className='container mt-2 mx-2 p-2 d-flex flex-column justify-content-center mx-auto '>
     <Title className='h6 display-6 mt-3 mx-auto'>
-       Update Car Info:
+       Update Car Spec:
      </Title>
      <UpdateFormDiv className='form-group d-flex flex-column justify-content-center'>
        <Input name='engine' onChange={handleChange} placeholder='Enter new info of Engine ' className='form-control w-50 mt-2 mx-auto'/>

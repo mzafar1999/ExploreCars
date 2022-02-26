@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 import styled from 'styled-components'
 import SingleCarListComp from './SingleCarListComp'
-import { selectCurrentCar } from '../../Redux/carsSlice'
+import { deleteCar, selectCurrentCar } from '../../Redux/carsSlice'
 
 const Container = styled.div`
     border: 2px solid #79fdf7;
@@ -20,11 +20,14 @@ const CarList = () => {
     })
     dispatch(selectCurrentCar(findCar))
   }
+	const handleDelete = (id)=>{
+	dispatch(deleteCar(id))    
+  }
   return (
     <Container className='mx-2 px-2 '>
         {cars.map((car)=>{
             return (
-            <SingleCarListComp key={car.id}  selectCar={selectCar} carId={car.id} title={car.name} image={car.imgtumbnail} />
+            <SingleCarListComp key={car.id} deleteCar={handleDelete}  selectCar={selectCar} carId={car.id} title={car.name} image={car.imgtumbnail} />
             )
         })}
     </Container>

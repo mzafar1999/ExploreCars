@@ -18,5 +18,16 @@ export const cars = [{
     img:'/images/lx600.jpg',
     imgtumbnail:'/images/lx600png.png'
 
+},
+{
+    id:3,
+    name:'Mercedes Benz C200',
+    sub_title:'ALL-NEW POWERTRAIN',
+    engine:' twin-turbocharged V6',
+    transmission:'Standard 10-speed Direct-Shift automatic transmission',
+    fuel_type:'Dissel',
+    img:'/images/benz.png',
+    imgtumbnail:'/images/benz.png'
+
 }
 ]

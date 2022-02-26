@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { initialCar } from '../../Redux/carsSlice'
+import { deleteCar, initialCar } from '../../Redux/carsSlice'
 import UpdateForm from './UpdateForm'
 export const Container = styled.div`
     border: 2px solid #79fdf7;
@@ -40,16 +40,18 @@ const SpecWrapper = styled.div`
  
 const CarInfo = () => {
   let currentCar = useSelector(state=>state.cars.currentCar)
+  let allCars = useSelector(state=>state.cars.allCars)
   const dispatch = useDispatch()
   useEffect(() => {
-    dispatch(initialCar())
+    dispatch(initialCar(allCars[0]))
   }, [])
   
+
   
   return (
     <>
     <Container className='mx-2 p-2'>
-      <InfoWrapper>
+     {currentCar ? <> <InfoWrapper>
         <ImageWrapper>
           <Image src={currentCar.img}/>
         </ImageWrapper>
@@ -82,7 +84,7 @@ const CarInfo = () => {
         </Title> {currentCar.fuel_type}
        </SpecWrapper>
       </Details>
-       
+       </> : <h1>All Car deletedd</h1> }
     </Container>
     <UpdateForm/>
     </>
