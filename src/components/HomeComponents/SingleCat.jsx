@@ -8,10 +8,20 @@ const Container =styled.div`
 `
 const ImageContianer = styled.div`
     background-color: gray;
-    height: 100px;
-    width: 340px;
+    height: 6em;
+    width: 21em;
     border-radius: 24px;
     object-fit: contain;
+    @media (max-width:1240px) {
+      height: 6em;
+      width: 17em;
+      border-radius: 12px;
+
+	}
+  @media (max-width:940px) {
+		height: 5em;
+      width: 13em;
+	}
 `
 const Image = styled.img`
   object-fit: cover;

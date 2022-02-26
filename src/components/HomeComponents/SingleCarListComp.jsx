@@ -23,10 +23,20 @@ const Wrapper = styled.div`
 	&:hover {
 		background-color: #c2c2c2;
 	}
+	@media (max-width:1240px) {
+		flex-direction: column;
+		height: 120px;
+		text-align: center;
+	}
+	@media (max-width:940px) {
+		flex-direction: column;
+		height: 150px;
+		text-align: center;
+	}
 `;
 const ImageWrapper = styled.div`
-	width: 70px;
-	height: 75px;
+	width: 4em;
+	height: 4em;
 	border-radius: 50%;
 	border: 1px solid #5acbda;
 	display: flex;
@@ -35,13 +45,21 @@ const ImageWrapper = styled.div`
 	object-fit: cover;
 	margin-right: 5px;
 	flex: 1;
+	@media (max-width:1240px) {
+		flex:1;
+	}
 `;
 const Image = styled.img`
-	width: 80%;
+	width: 100%;
+	height: 100%;
 	border-radius: 50%;
-	object-fit: cover;
+	object-fit: contain;
 `;
-const TitleWrapper = styled.div`flex: 3;`;
+const TitleWrapper = styled.div`flex: 3;
+@media (max-width:1240px) {
+		flex:1;
+	}
+`;
 const Title = styled.h5``;
 
 

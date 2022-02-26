@@ -6,8 +6,9 @@ import SingleCarListComp from './SingleCarListComp'
 import { deleteCar, selectCurrentCar } from '../../Redux/carsSlice'
 
 const Container = styled.div`
-    /* border: 2px solid #421445; */
-    /* border-radius: 15px; */
+     @media (max-width:940px) {
+       height: 14em;
+}
 `
 
 

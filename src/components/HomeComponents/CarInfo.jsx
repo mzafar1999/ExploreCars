@@ -11,11 +11,18 @@ export const Container = styled.div`
 const InfoWrapper = styled.div`
   display: flex;
   align-items: center;
+  @media (max-width:1240px) {
+	
+	}
 `
 const ImageWrapper = styled.div`
     flex: 1;
     height: 300px;
     width: 400px;
+    @media (max-width:1240px) {
+      height: 150px;
+    width: 200px;
+}
 `
 const Image = styled.img`
   width: 100%;
