@@ -29,10 +29,11 @@ const carsSlice = createSlice({
 		},
 		initialCar: (state, action) => {
 			state.currentCar = action.payload;
-		}
+		},
+		
 	}
 });
 
-export const { updateCarInfo, selectCurrentCar, initialCar,deleteCar } = carsSlice.actions;
+export const { updateCarInfo, selectCurrentCar, initialCar,deleteCar,retrieveAllCars } = carsSlice.actions;
 
 export default carsSlice.reducer;

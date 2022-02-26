@@ -43,10 +43,7 @@ const Image = styled.img`
 `;
 const TitleWrapper = styled.div`flex: 3;`;
 const Title = styled.h5``;
-const Button = styled.button`
-    border:none; 
-    background-color: transparent;
-`
+
 
 const SingleCarListComp = ({ image, title, selectCar,carId,deleteCar }) => {
 	

@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { updateCarInfo } from '../../Redux/carsSlice';
-import { Container,Title } from "./CarInfo";
+import { Title } from "./CarInfo";
+
+const Container = styled.div``
+
 const UpdateFormDiv = styled.div`
   
 `

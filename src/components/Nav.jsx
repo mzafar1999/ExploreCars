@@ -20,8 +20,7 @@ const Image = styled.img`
 	width: 100%;
 	margin-left: 40px;
 `;
-const Search = styled.input``;
-const Button = styled.button``;
+
 const Nav = () => {
 	return (
 		<Wrapper>

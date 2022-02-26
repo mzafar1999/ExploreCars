@@ -22,10 +22,10 @@ export const cars = [{
 {
     id:3,
     name:'Mercedes Benz C200',
-    sub_title:'ALL-NEW POWERTRAIN',
-    engine:' twin-turbocharged V6',
-    transmission:'Standard 10-speed Direct-Shift automatic transmission',
-    fuel_type:'Dissel',
+    sub_title:'A New Breed of Bold',
+    engine:' 2.0L Inline-4 turbo engine with ISG',
+    transmission:'A nine-speed automatic transmission',
+    fuel_type:'Petrol',
     img:'/images/benz.png',
     imgtumbnail:'/images/benz.png'
 

@@ -1,15 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 import SingleCat from './SingleCat'
-import {cars, category} from './data'
+import { category} from './data'
 const Container = styled.div`
-    border: 2px solid #000000;
-    border-radius: 15px;
+    /* border: 3px solid #421445; */
+    /* border-radius: 15px; */
 `
 const CarPhotos = () => {
   return (
     <Container className='mx-2 p-2 d-flex flex-column justify-content-center align-items-center'>
-      <h2>Car Catagories</h2>
+      <h1 style={{color:'#421445',borderBottom:'2px solid #421445'}}>Car Catagories</h1>
       {
         category.map((cat)=>{
           return <SingleCat image={cat.image} cat={cat.cat} key={cat.id} />

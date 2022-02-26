@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { deleteCar, initialCar } from '../../Redux/carsSlice'
+import {  initialCar } from '../../Redux/carsSlice'
 import UpdateForm from './UpdateForm'
 export const Container = styled.div`
-    border: 2px solid #000000;
+    border: 2px solid #421445;
     border-radius: 15px;
 `
 const InfoWrapper = styled.div`
@@ -49,8 +48,10 @@ const CarInfo = () => {
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(initialCar(allCars[0]))
-  }, [])
+  }, [allCars,dispatch])
   
+  
+
 
   
   return (
@@ -89,7 +90,10 @@ const CarInfo = () => {
         </Title> {currentCar.fuel_type}
        </SpecWrapper>
       </Details>
-       </> : <h1>All Car deletedd</h1> }
+       </> :<>
+       <h1>All Cars deleteded</h1>
+       <button className='btn btn-success' onClick={()=>window.location.reload()}>Retrieve all cars</button>
+       </> }
     </Container>
     <UpdateForm/>
     </>
