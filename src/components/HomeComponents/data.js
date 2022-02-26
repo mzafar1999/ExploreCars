@@ -31,3 +31,28 @@ export const cars = [{
 
 }
 ]
+
+export const category = [{
+    id:1,
+    cat:'sport',
+    image:'/images/sportcat.jpg'
+},{
+    id:2,
+    cat:'suv',
+    image:'/images/suvcat.jpg'
+},
+{
+    id:3,
+    cat:'sedan',
+    image:'/images/sedancat.jpg'
+},
+{
+    id:4,
+    cat:'wagon',
+    image:'/images/wagoncat.jpg'
+},
+{
+    id:5,
+    cat:'4x4',
+    image:'/images/4x4cat.jpg'
+}]

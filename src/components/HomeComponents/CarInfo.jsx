@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import { deleteCar, initialCar } from '../../Redux/carsSlice'
 import UpdateForm from './UpdateForm'
 export const Container = styled.div`
-    border: 2px solid #79fdf7;
+    border: 2px solid #000000;
     border-radius: 15px;
 `
 const InfoWrapper = styled.div`
@@ -15,9 +15,14 @@ const InfoWrapper = styled.div`
 `
 const ImageWrapper = styled.div`
     flex: 1;
+    height: 300px;
+    width: 400px;
 `
 const Image = styled.img`
   width: 100%;
+  height:100%;
+  object-fit: contain;
+
 `
 const TitleWrapper = styled.div`
     flex: 1;

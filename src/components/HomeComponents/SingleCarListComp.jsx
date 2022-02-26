@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import '../../App.css'
 
 const Container= styled.div`
 	border: 1px solid #bfe0d3;
@@ -20,7 +21,7 @@ const Wrapper = styled.div`
 	padding: 5px;
 
 	&:hover {
-		background-color: #fffbc5;
+		background-color: #c2c2c2;
 	}
 `;
 const ImageWrapper = styled.div`
