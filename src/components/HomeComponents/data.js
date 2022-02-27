@@ -6,7 +6,8 @@ export const cars = [{
     transmission:'10 SPEED AUTOMATIC',
     fuel_type:'Patrol',
     img:'/images/lc300.png',
-    imgtumbnail:'/images/lc300.png'
+    imgtumbnail:'/images/lc300.png',
+    cat:'suv'
 
 },{
     id:2,
@@ -16,7 +17,8 @@ export const cars = [{
     transmission:'Standard 10-speed Direct-Shift automatic transmission',
     fuel_type:'Dissel',
     img:'/images/lx600.jpg',
-    imgtumbnail:'/images/lx600png.png'
+    imgtumbnail:'/images/lx600png.png',
+    cat:'suv'
 
 },
 {
@@ -27,8 +29,8 @@ export const cars = [{
     transmission:'nine-speed automatic transmission',
     fuel_type:'Petrol',
     img:'/images/benz.png',
-    imgtumbnail:'/images/benz.png'
-
+    imgtumbnail:'/images/benz.png',
+    cat:'sedan'
 },
 {
     id:4,
@@ -38,7 +40,8 @@ export const cars = [{
     transmission:'seven-speed automatic transmission and Quattro all-wheel drive',
     fuel_type:'Hybrid',
     img:'/images/audia6.png',
-    imgtumbnail:'/images/audia6.png'
+    imgtumbnail:'/images/audia6.png',
+    cat:'wagon'
 
 },{
     id:5,
@@ -48,12 +51,38 @@ export const cars = [{
     transmission:'Eight-speed automatic, AWD',
     fuel_type:'Patrol',
     img:'/images/audisport.png',
-    imgtumbnail:'/images/audisport.png'
-
+    imgtumbnail:'/images/audisport.png',
+    cat:'wagon'
+},
+{
+    id:6,
+    name:'Ferrari SF90 Spider',
+    sub_title:'New Retractable Hardtop.',
+    engine:'4.0-liter V8 engine that’s twin-turbocharged and three electric motors',
+    transmission:'8-speed dual-clutch transmission',
+    fuel_type:'Patrol',
+    img:'/images/ferrari.png',
+    imgtumbnail:'/images/ferrari.png',
+    cat:'sport'
+},
+{
+    id:7,
+    name:'Mercedes Benz X Class',
+    sub_title:'Designed Performance Over Economy.',
+    engine:'4.8-litre V6',
+    transmission:'7-Speed dual-clutch Automatic ',
+    fuel_type:'Patrol',
+    img:'/images/xclass4x4.png',
+    imgtumbnail:'/images/xclass4x4.png',
+    cat:'4x4'
 }
 ]
 
 export const category = [{
+    id:0,
+    cat:'All Cars',
+    image:'/images/allcat.png'
+},{
     id:1,
     cat:'sport',
     image:'/images/sportcat.jpg'

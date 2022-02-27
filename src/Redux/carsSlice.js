@@ -4,6 +4,7 @@ const carsSlice = createSlice({
 	name: 'cars',
 	initialState: {
 		allCars: cars,
+		filteredCarsCatagory:[],
 		currentCar: {}
 	},
 	reducers: {
@@ -30,10 +31,16 @@ const carsSlice = createSlice({
 		initialCar: (state, action) => {
 			state.currentCar = action.payload;
 		},
+		filterCarCat:(state,action)=>{
+			let filterCarCategory = state.allCars.filter((car)=>{
+				return car.cat===action.payload
+			})
+			state.filteredCarsCatagory = filterCarCategory
+		}
 		
 	}
 });
 
-export const { updateCarInfo, selectCurrentCar, initialCar,deleteCar,retrieveAllCars } = carsSlice.actions;
+export const { updateCarInfo, selectCurrentCar, initialCar,deleteCar,retrieveAllCars,filterCarCat } = carsSlice.actions;
 
 export default carsSlice.reducer;

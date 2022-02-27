@@ -14,6 +14,7 @@ const Container = styled.div`
 
 const CarList = () => {
   const cars = useSelector(state=>state.cars.allCars)
+  const filteredCars = useSelector(state=>state.cars.filteredCarsCatagory)
   const dispatch = useDispatch()
   const selectCar = (id)=>{
     let findCar = cars.find((car)=>{
@@ -24,17 +25,35 @@ const CarList = () => {
 	const handleDelete = (id)=>{
 	dispatch(deleteCar(id))    
   }
-  return (
-    <Container className='mx-2 px-2 '>
-            <h1 style={{color:'#421445',borderBottom:'2px solid #421445'}}>Cars List</h1>
 
-        {cars.map((car)=>{
-            return (
-            <SingleCarListComp key={car.id} deleteCar={handleDelete}  selectCar={selectCar} carId={car.id} title={car.name} image={car.imgtumbnail} />
-            )
-        })}
-    </Container>
-  )
+  if(filteredCars.length>0){
+    return (
+      <Container className='mx-2 px-2 '>
+              <h1 style={{color:'#421445',borderBottom:'2px solid #421445'}}>Cars List</h1>
+  
+          {filteredCars.map((car)=>{
+              return (
+              <SingleCarListComp key={car.id} deleteCar={handleDelete}  selectCar={selectCar} carId={car.id} title={car.name} image={car.imgtumbnail} />
+              )
+          })}
+      </Container>
+    )
+  }
+  if(filteredCars.length===0){
+    return (
+      <Container className='mx-2 px-2 '>
+              <h1 style={{color:'#421445',borderBottom:'2px solid #421445'}}>Cars List</h1>
+  
+          {cars.map((car)=>{
+              return (
+              <SingleCarListComp key={car.id} deleteCar={handleDelete}  selectCar={selectCar} carId={car.id} title={car.name} image={car.imgtumbnail} />
+              )
+          })}
+      </Container>
+    )
+  }
+
+  
 }
 
 export default CarList

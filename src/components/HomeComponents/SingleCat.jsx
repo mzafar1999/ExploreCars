@@ -1,6 +1,8 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import styled from 'styled-components'
 import '../../App.css'
+import { filterCarCat } from '../../Redux/carsSlice'
 const Container =styled.div`
     position: relative;
   text-align: center;
@@ -59,8 +61,12 @@ const Title = styled.h3`
   font-weight: 600;
 `
 const SingleCat = ({id,cat,image}) => {
+  const dispatch = useDispatch()
+	const filterCat = ()=>{
+			dispatch(filterCarCat(cat))
+	}
   return (
-    <Container className='my-2'>
+    <Container className='my-2' onClick={filterCat}>
         <ImageContianer>
             <Image src={image}/>
         </ImageContianer>
