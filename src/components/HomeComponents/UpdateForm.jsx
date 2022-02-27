@@ -45,7 +45,7 @@ const UpdateForm = () => {
        <Input name='engine' onChange={handleChange} placeholder='Enter new info of Engine ' className='form-control w-50 mt-2 mx-auto'/>
        <Input name='transmission' onChange={handleChange}  placeholder='Enter new info of Transmission' className='form-control w-50 mt-2 mx-auto'/>
        <Input name='fuelType' onChange={handleChange}  placeholder='Enter new info of Fuel Type' className='form-control w-50 mt-2 mx-auto'/>
-       <button className='btn btn-primary w-25 mx-auto mt-3' onClick={handleClick}>Update</button>
+       <button style={{backgroundColor:'#421445'}} className='btn btn-primary w-25 mx-auto mt-3' onClick={handleClick}>Update</button>
      </UpdateFormDiv>
     </Container>
   )
