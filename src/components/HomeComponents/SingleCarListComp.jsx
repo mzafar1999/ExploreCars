@@ -64,7 +64,7 @@ const TitleWrapper = styled.div`flex: 3;
 const Title = styled.h5``;
 
 
-const SingleCarListComp = ({ image, title, selectCar,carId,deleteCar }) => {
+const SingleCarListComp = ({ image, title, selectCar,carId,deleteCar,filtered }) => {
 	
 	return (<Container>
 		<Wrapper onClick={()=>selectCar(carId)}>
@@ -75,7 +75,7 @@ const SingleCarListComp = ({ image, title, selectCar,carId,deleteCar }) => {
 					<Title>{title}</Title>
 			</TitleWrapper>
 		</Wrapper>
-		<button className='btn btn-danger  my-1' onClick={()=> deleteCar(carId)}>Delete</button>
+		{!filtered && <button className='btn btn-danger  my-1' onClick={()=> deleteCar(carId)}>Delete</button>}
 		</Container>
 	);
 };
