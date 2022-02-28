@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 import styled from 'styled-components'
 import {  initialCar } from '../../Redux/carsSlice'
-import UpdateForm from './UpdateForm'
 export const Container = styled.div`
     border: 2px solid #421445;
     border-radius: 15px;
@@ -102,7 +101,6 @@ const CarInfo = () => {
        <button className='btn btn-success' onClick={()=>window.location.reload()}>Retrieve all cars</button>
        </> }
     </Container>
-    <UpdateForm/>
     </>
     
   )

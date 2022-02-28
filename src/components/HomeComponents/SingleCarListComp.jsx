@@ -1,5 +1,4 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
 import '../../App.css'
 
@@ -37,7 +36,7 @@ const Wrapper = styled.div`
 `;
 const ImageWrapper = styled.div`
 	width: 4em;
-	height: 4em;
+	height: 5em;
 	border-radius: 50%;
 	border: 1px solid #5acbda;
 	display: flex;
@@ -75,7 +74,6 @@ const SingleCarListComp = ({ image, title, selectCar,carId,deleteCar,filtered })
 					<Title>{title}</Title>
 			</TitleWrapper>
 		</Wrapper>
-		{!filtered && <button className='btn btn-danger  my-1' onClick={()=> deleteCar(carId)}>Delete</button>}
 		</Container>
 	);
 };

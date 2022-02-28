@@ -3,15 +3,13 @@ import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 import styled from 'styled-components'
 import SingleCarListComp from './SingleCarListComp'
-import { deleteCar, selectCurrentCar } from '../../Redux/carsSlice'
+import {  selectCurrentCar } from '../../Redux/carsSlice'
 
 const Container = styled.div`
      @media (max-width:940px) {
        height: 14em;
 }
 `
-
-
 const CarList = () => {
   const cars = useSelector(state=>state.cars.allCars)
   const filteredCars = useSelector(state=>state.cars.filteredCarsCatagory)
@@ -22,9 +20,7 @@ const CarList = () => {
     })
     dispatch(selectCurrentCar(findCar))
   }
-	const handleDelete = (id)=>{
-	dispatch(deleteCar(id))    
-  }
+	
 
   if(filteredCars.length>0){
     return (
@@ -47,7 +43,7 @@ const CarList = () => {
   
           {cars.map((car)=>{
               return (
-              <SingleCarListComp key={car.id} deleteCar={handleDelete}  selectCar={selectCar} carId={car.id} title={car.name} image={car.imgtumbnail} />
+              <SingleCarListComp key={car.id}  selectCar={selectCar} carId={car.id} title={car.name} image={car.imgtumbnail} />
               )
           })}
       </Container>
